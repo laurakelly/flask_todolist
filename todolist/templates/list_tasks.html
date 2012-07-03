@@ -1,0 +1,24 @@
+<!-- <!doctype html> -->
+
+<html>
+    <body>
+        <h1>This is a header</h1>
+        <h2>this is a smaller header</h2>
+        <p>
+            <b>this is bold text</b>
+            <i>this is italic text</i>
+            This is unadorned text
+        </p>
+    {% block body %}
+        <ul>
+            {% if tasks %}
+                {%for task in tasks%}
+<!--                     {% if task.completed_at != None %} -->
+                    <li><form><input type ="checkbox" name="completed"></form> {{ task }}</li>
+                    <!-- {% endif %} -->
+                {% endfor %}
+            {% endif %}
+        </ul>
+    {% endblock %}
+    </body>
+</html>
